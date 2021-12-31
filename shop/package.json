@@ -1,0 +1,44 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "description": "upper funnel of an ecommerce site",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx browserslist@latest --update-db && PORT=3002 next dev",
+    "build": "next build",
+    "start": "PORT=3002 next start",
+    "commit": "npx git-cz",
+    "format": "npm run pretty -- --write",
+    "lint": "eslint --ignore-path .gitignore --ext .js --ext .jsx .",
+    "pretty": "prettier --ignore-path .gitignore \"**/*.+(js|json|md)\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nextjs-shared": "*",
+    "@module-federation/nextjs-mf": "^2.3.1",
+    "next": "^12.0.7",
+    "next-compose-plugins": "^2.2.1",
+    "next-images": "^1.8.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.45.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^12.0.7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-sonarjs": "^0.11.0",
+    "prettier": "^2.5.1",
+    "webpack": "^5.65.0",
+    "webpack-merge": "^5.8.0"
+  }
+}
