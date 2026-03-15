@@ -1,7 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
+import type { NextPage } from 'next';
 
-const Checkout = (props) => {
+const Checkout: NextPage = () => {
   return (
     <>
       <Head>
@@ -15,7 +16,6 @@ const Checkout = (props) => {
         </h3>
         <span>Data from federated <pre>getInitialProps</pre></span>
         <br/>
-        <pre>{JSON.stringify(props, null, 2)}</pre>
       </div>
     </>
   )
@@ -23,8 +23,9 @@ const Checkout = (props) => {
 
 Checkout.getInitialProps = async () => {
   await fetch("https://jsonplaceholder.typicode.com/todos/1").then((res) =>
-  res.json()
-);
+    res.json()
+  );
+  return {};
 }
 
 export default Checkout;

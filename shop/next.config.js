@@ -18,9 +18,9 @@ module.exports = withFederatedSidecar({
   name: "shop",
   filename: "static/chunks/remoteEntry.js",
   exposes: {
-    "./thing": "./src/components/Thing.js",
-    "./shop": "./pages/shop",
-    "./pages-map": "./pages-map.js"
+    "./thing": "./src/components/Thing.tsx",
+    "./shop": "./pages/shop.tsx",
+    "./pages-map": "./pages-map.ts"
   },
   shared: {
     react: {
@@ -37,7 +37,7 @@ module.exports = withFederatedSidecar({
     config.output.publicPath = "auto";
 
     config.module.rules.push({
-      test: /_app.js/,
+      test: /_app.tsx/,
       loader: "@module-federation/nextjs-mf/lib/federation-loader.js"
     });
     if (options.isServer) {

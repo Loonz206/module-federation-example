@@ -1,7 +1,12 @@
 import React from "react";
 import Head from "next/head";
+import type { NextPageContext } from "next";
 
-const Error = ({ statusCode }) => {
+interface ErrorProps {
+  statusCode?: number;
+}
+
+const Error = ({ statusCode }: ErrorProps) => {
   return (
     <>
       <Head>
@@ -23,11 +28,11 @@ const Error = ({ statusCode }) => {
   );
 };
 
-Error.getInitialProps = ({ res, err }) => {
+Error.getInitialProps = ({ res, err }: NextPageContext): ErrorProps => {
   if (res) {
-    return res.statusCode;
+    return { statusCode: res.statusCode };
   }
-  return err ? err.statusCode : 404;
+  return { statusCode: err ? err.statusCode : 404 };
 };
 
 export default Error;
