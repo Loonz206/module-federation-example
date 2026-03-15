@@ -10,16 +10,18 @@ module.exports = {
     "plugin:prettier/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:sonarjs/recommended",
+    "plugin:@typescript-eslint/recommended",
     "next",
   ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 8,
+    ecmaVersion: 2021,
     sourceType: "module",
   },
-  plugins: ["react", "sonarjs", "prettier", "jsx-a11y", "react-hooks"],
+  plugins: ["react", "sonarjs", "prettier", "jsx-a11y", "react-hooks", "@typescript-eslint"],
   rules: {},
   settings: {
     react: {

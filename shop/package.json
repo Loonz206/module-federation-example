@@ -9,8 +9,8 @@
     "start": "PORT=3002 next start",
     "commit": "npx git-cz",
     "format": "npm run pretty -- --write",
-    "lint": "eslint --ignore-path .gitignore --ext .js --ext .jsx .",
-    "pretty": "prettier --ignore-path .gitignore \"**/*.+(js|json|md)\""
+    "lint": "eslint --ignore-path .gitignore --ext .js --ext .jsx --ext .ts --ext .tsx .",
+    "pretty": "prettier --ignore-path .gitignore \"**/*.+(js|ts|tsx|json|md)\""
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +25,11 @@
     "sass": "^1.45.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@types/node": "^18.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "^12.0.7",
     "eslint-config-prettier": "^8.3.0",
@@ -38,6 +43,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-sonarjs": "^0.11.0",
     "prettier": "^2.5.1",
+    "typescript": "^5.0.0",
     "webpack": "^5.65.0",
     "webpack-merge": "^5.8.0"
   }
